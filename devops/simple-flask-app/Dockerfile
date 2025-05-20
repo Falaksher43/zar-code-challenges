@@ -10,19 +10,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     gcc \
     libpq-dev \
+    cloud-init \
     curl \
     netcat-openbsd \
     libssl-dev \
     libffi-dev \
     libsystemd-dev \
-    libdbus-1-dev \
-    libdbus-glib-1-dev \
-    libgirepository1.0-dev \
-    libglib2.0-dev \
-    gir1.2-gtk-3.0 \
-    libcairo2-dev \
-    libcups2-dev \
-    liblouis-dev \
     python3-gi \
     python3-apt \
     && rm -rf /var/lib/apt/lists/*
