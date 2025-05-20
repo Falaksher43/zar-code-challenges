@@ -6,18 +6,22 @@ ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
     build-essential \
-    gcc \
-    libpq-dev \
-    cloud-init \
-    curl \
-    netcat-openbsd \
-    libssl-dev \
+    python3-dev \
     libffi-dev \
-    libsystemd-dev \
-    python3-gi \
-    python3-apt \
+    libssl-dev \
+    libxml2-dev \
+    libxslt1-dev \
+    zlib1g-dev \
+    libjpeg-dev \
+    libgirepository1.0-dev \
+    libcairo2-dev \
+    pkg-config \
+    gir1.2-gtk-3.0 \
+    dbus \
+    libdbus-glib-1-dev \
     && rm -rf /var/lib/apt/lists/*
 
 RUN adduser --disabled-password --gecos "" appuser
